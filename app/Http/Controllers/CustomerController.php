@@ -36,7 +36,7 @@ class CustomerController extends Controller
             return redirect('/');
         }
 
-        $data = Customer::paginate(5);
+        $data = customers::all();
 
         return view('display', ['data' => $data]);
     }
